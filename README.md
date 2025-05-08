@@ -67,7 +67,6 @@ This project includes a full authentication flow, filtering, editing, and deleti
 1. **Clone the repository** and navigate into the project:
 
 ```
-bash
 git clone https://github.com/twincarlos/biocollections-carlos-rodriguez-take-home.git
 cd biocollections-carlos-rodriguez-take-home
 ```
