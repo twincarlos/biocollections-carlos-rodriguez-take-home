@@ -1,0 +1,21 @@
+.notification-container {
+    line-height: 15px;
+}
+
+.notification-container.unread {
+    font-weight: 700;
+}
+
+.notifications-menu .menu {
+    transform: translate(-100%, 0%);
+    width: 300px;
+    padding: 20px;
+}
+
+.notifications-menu .menu ul {
+    gap: 10px;
+}
+
+.timestamp {
+    font-size: 12px;
+}

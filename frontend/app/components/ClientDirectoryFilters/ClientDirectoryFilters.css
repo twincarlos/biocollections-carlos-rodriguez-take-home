@@ -1,0 +1,61 @@
+.client-directory-filters--name {
+    width: 505px;
+}
+
+.client-directory-filters--birthday {
+    width: 181px;
+}
+
+.client-directory-filters--client-type {
+    width: 173px;
+}
+
+.client-directory-filters--submit {
+    width: 52px;
+    height: 50px;
+    height: 50px;
+}
+
+.settings-menu .menu {
+    transform: translate(-80%, 0%);
+}
+
+@media (min-width: 1281px) and (max-width: 1536px) {
+    .client-directory-filters--name {
+        width: 400px;
+    }
+
+    .client-directory-filters--birthday {
+        width: 181px;
+    }
+
+    .client-directory-filters--client-type {
+        width: 173px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .client-directory-filters--name {
+        width: 200px;
+    }
+
+    .client-directory-filters--birthday {
+        width: 150px;
+    }
+
+    .client-directory-filters--client-type {
+        width: 173px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .client-directory-filters form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .client-directory-filters form > * {
+        width: 100%;
+    }
+}
