@@ -81,7 +81,7 @@ npm install
 3. **Create `.env` file in the `backend` directory with the following content:**
 
 ```
-JWT_SECRET=your_secret_key
+JWT_SECRET=<your_secret_key>
 ```
 
 4. **Install MongoDB and run it locally:**
@@ -107,7 +107,6 @@ npm run dev
 
 7. **Login credentials:**
 ```
-cd ../frontend
 Email:    admin@example.com
 Password: password123
 ```
