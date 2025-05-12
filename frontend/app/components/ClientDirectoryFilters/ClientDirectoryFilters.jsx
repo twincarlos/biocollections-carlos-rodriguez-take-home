@@ -40,6 +40,7 @@ function ClientDirectoryFilters({defaultValues={}}) {
                         options={[
                             { value: "Checking", label: "Checking" },
                             { value: "Savings", label: "Savings" },
+                            { value: "", label: "Any" },
                         ]}
                     />
                     <button

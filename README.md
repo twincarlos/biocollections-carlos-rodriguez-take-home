@@ -62,8 +62,6 @@ This project includes a full authentication flow, filtering, editing, and deleti
 
 ## ⚙️ Setup Instructions
 
----
-
 1. **Clone the repository** and navigate into the project:
 
 ```

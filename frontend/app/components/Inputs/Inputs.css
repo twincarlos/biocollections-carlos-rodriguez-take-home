@@ -11,6 +11,7 @@ input, select {
     line-height: 100%;
     letter-spacing: -2%;
     vertical-align: middle;
+    font-family: inherit;
 }
 
 input:focus, select:focus {
