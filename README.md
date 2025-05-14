@@ -80,6 +80,7 @@ npm install
 
 ```
 JWT_SECRET=<your_secret_key>
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.xxxxxx.mongodb.net/<db_name>?retryWrites=true&w=majority
 ```
 
 4. **Install MongoDB and run it locally:**
