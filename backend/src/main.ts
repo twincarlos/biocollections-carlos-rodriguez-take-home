@@ -5,8 +5,8 @@ import * as cookieParser from 'cookie-parser';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(cookieParser());
-  app.enableCors({ 
-    origin: 'http://localhost:3000',
+  app.enableCors({
+    origin: ['https://biocollections-carlos-rodriguez-take-home.vercel.app/', `http://localhost:${process.env.PORT || '8000'}`],
     credentials: true
   });
   await app.listen(process.env.PORT ?? 8000);
