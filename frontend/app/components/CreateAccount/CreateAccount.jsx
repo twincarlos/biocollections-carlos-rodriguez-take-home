@@ -23,7 +23,7 @@ function CreateAccount() {
         const randomNumber = generateRandom13DigitNumber();
 
         await handleUpdate({
-            url: `http://localhost:8000/clients`,
+            url: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/clients`,
             method: "POST",
             messageOnSuccess: "Client updated successfully!",
             data: {

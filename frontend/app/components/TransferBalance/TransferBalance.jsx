@@ -16,7 +16,7 @@ function TransferBalance({ client }) {
             setPopupContent(<ErrorMessage message={"Insufficient balance!"} />);
         } else {
             await handleUpdate({
-                url: `http://localhost:8000/clients/${client._id}`,
+                url: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/clients/${client._id}`,
                 method: "PUT",
                 messageOnSuccess: "Balance withdrawn successfully!",
                 data: {
@@ -24,7 +24,7 @@ function TransferBalance({ client }) {
                 }
             });
             await handleUpdate({
-                url: `http://localhost:8000/notifications`,
+                url: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/notifications`,
                 method: "POST",
                 data: { content: `Account #${client.account} has withdrawn $${amount}` }
             });
@@ -34,7 +34,7 @@ function TransferBalance({ client }) {
     async function deposit(e) {
         e.preventDefault();
         await handleUpdate({
-            url: `http://localhost:8000/clients/${client._id}`,
+            url: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/clients/${client._id}`,
             method: "PUT",
             messageOnSuccess: "Balance deposited successfully!",
             data: {
@@ -42,7 +42,7 @@ function TransferBalance({ client }) {
             }
         });
         await handleUpdate({
-            url: `http://localhost:8000/notifications`,
+            url: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/notifications`,
             method: "POST",
             data: { content: `Account #${client.account} has deposited $${amount}` }
         });
