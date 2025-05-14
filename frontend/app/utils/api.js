@@ -1,7 +1,7 @@
 export async function fetchClients(searchParams) {
     const query = new URLSearchParams(searchParams).toString();
 
-    const res = await fetch(`http://localhost:8000/clients/search?${query}`, {
+    const res = await fetch(`${NEXT_PUBLIC_API_URL}/clients/search?${query}`, {
         cache: 'no-store',
     });
 
@@ -13,7 +13,7 @@ export async function fetchClients(searchParams) {
 };
 
 export async function fetchNotifications() {
-    const res = await fetch(`http://localhost:8000/notifications`, {
+    const res = await fetch(`${NEXT_PUBLIC_API_URL}/notifications`, {
         cache: 'no-store',
     });
 
