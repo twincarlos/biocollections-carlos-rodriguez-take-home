@@ -5,7 +5,7 @@ import Select from "../Inputs/Select/Select";
 import ClientDirectoryIcons from "./ClientDirectoryIcons";
 import searchIcon from "../../../public/images/fa-magnifying-glass.png";
 
-function ClientDirectoryFilters({defaultValues={}}) {
+function ClientDirectoryFilters({ defaultValues = {} }) {
     return (
         <div className="client-directory-filters card padding-large flex flex-direction--column gap-medium">
             <div className="client-directory-filters--header flex flex-justify-content--space-between flex-align-items--center">

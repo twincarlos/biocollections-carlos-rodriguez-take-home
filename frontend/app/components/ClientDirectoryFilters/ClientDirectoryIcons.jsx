@@ -25,7 +25,7 @@ function ClientDirectoryIcons({ mobileOnly = false }) {
                         else if (menuOpen === "notifications") {
                             setMenuOpen(null);
                             await handleUpdate({
-                                url: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/notifications`,
+                                url: `/api/notifications`,
                                 method: "PATCH"
                             });
                         };
@@ -47,7 +47,7 @@ function ClientDirectoryIcons({ mobileOnly = false }) {
                         else if (menuOpen === "notifications") {
                             setMenuOpen("settings");
                             await handleUpdate({
-                                url: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/notifications`,
+                                url: `/api/notifications`,
                                 method: "PATCH"
                             });
                         }

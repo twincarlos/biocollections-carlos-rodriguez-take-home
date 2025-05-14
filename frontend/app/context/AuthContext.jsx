@@ -22,7 +22,7 @@ export function AuthProvider({ children }) {
 
   async function getSession() {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/auth/me`, {
+      const res = await fetch(`/api/auth/me`, {
         method: 'GET',
         credentials: 'include'
       });
@@ -35,7 +35,7 @@ export function AuthProvider({ children }) {
   }
 
   async function login({email, password}) {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/auth/login`, {
+    const res = await fetch(`/api/auth/login`, {
       method: 'POST',
       credentials: 'include',
       headers: { 'Content-Type': 'application/json' },
@@ -56,7 +56,7 @@ export function AuthProvider({ children }) {
   }
 
   async function logout() {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/auth/logout`, {
+    const res = await fetch(`/api/auth/logout`, {
       method: 'POST',
       credentials: 'include',
     });

@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/:path*",
+            "destination": "https://biocollections-carlos-rodriguez-take-home.onrender.com/:path*"
+        }
+    ]
+}

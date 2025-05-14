@@ -12,13 +12,13 @@ function ClientDetails({ client }) {
     async function handleSubmit(e) {
         e.preventDefault();
         await handleUpdate({
-            url: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/clients/${client._id}`,
+            url: `/api/clients/${client._id}`,
             method: "PUT",
             messageOnSuccess: "Client updated successfully!",
             data: clientData
         });
         await handleUpdate({
-            url: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/notifications`,
+            url: `/api/notifications`,
             method: "POST",
             data: { content: `Account #${client.account} has been updated` }
         });

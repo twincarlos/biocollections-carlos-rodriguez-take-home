@@ -6,8 +6,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(cookieParser());
   app.enableCors({
-    origin: ['https://biocollections-carlos-rodriguez-take-home.vercel.app'],
-    credentials: true
+    origin: false
   });
   await app.listen(process.env.PORT ?? 8000);
 }
